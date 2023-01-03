@@ -2,7 +2,7 @@ vim.opt.langmap = "чявертъуиопшщасдфгхйклзьцжбнмЧ�
 vim.opt.clipboard = "unnamedplus"     -- using system clipboard
 vim.opt.termguicolors = true          -- more colors
 vim.opt.updatetime = 50               -- use shorter update time (default 4k)
--- vim.opt.mouse=a                   -- enable mouse support
+vim.opt.mouse=nil                   -- enable mouse support
 
 vim.opt.number = true                 -- current line number for relative numbers
 vim.opt.relativenumber = true         -- show line nubers relative to the cursor
@@ -41,4 +41,7 @@ vim.opt.cursorline = true             -- highlight current cursorline
 
 vim.g.mapleader = " "
 
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = {"menu", "menuone", "noselect"}
+
+-- set explicit filetype for .pl
+vim.cmd "au BufNewFile,BufRead *.pl setf prolog"
