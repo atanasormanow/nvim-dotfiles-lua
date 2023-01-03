@@ -67,3 +67,9 @@ vim.keymap.set("n", "<leader>n", "<cmd>noh<CR>")
 -- format file/selection
 vim.keymap.set("n", "<leader>=", "<cmd>LspZeroFormat<CR>")
 vim.keymap.set("v", "<leader>=", "<cmd>LspZeroFormat<CR>")
+
+-- manage sessions
+vim.keymap.set("n", "<leader>ss", "<cmd>SaveSession<CR>")
+vim.keymap.set("n", "<leader>sd", "<cmd>DeleteSession<CR>")
+vim.keymap.set("n", "<leader>s/", "<cmd>Autosession search<CR>")
+vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<CR>")
