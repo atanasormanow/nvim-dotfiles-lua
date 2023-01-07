@@ -2,7 +2,6 @@ vim.opt.langmap = "чявертъуиопшщасдфгхйклзьцжбнмЧ�
 vim.opt.clipboard = "unnamedplus"     -- using system clipboard
 vim.opt.termguicolors = true          -- more colors
 vim.opt.updatetime = 50               -- use shorter update time (default 4k)
-vim.opt.mouse=nil                   -- enable mouse support
 
 vim.opt.number = true                 -- current line number for relative numbers
 vim.opt.relativenumber = true         -- show line nubers relative to the cursor

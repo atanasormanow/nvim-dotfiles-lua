@@ -73,3 +73,27 @@ vim.keymap.set("n", "<leader>ss", "<cmd>SaveSession<CR>")
 vim.keymap.set("n", "<leader>sd", "<cmd>DeleteSession<CR>")
 vim.keymap.set("n", "<leader>s/", "<cmd>Autosession search<CR>")
 vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<CR>")
+
+-- toggle mouse
+vim.keymap.set("n", "<leader>m", function()
+  local mouse_opt = vim.opt.mouse:get()
+  local state
+  if mouse_opt["a"] then
+    vim.cmd "set mouse="
+    state = "OFF"
+  else
+    vim.cmd "set mouse=a"
+    state = "ON"
+  end
+  vim.notify("Mouse " .. state)
+end)
+
+-- toggle background (light/dark)
+vim.keymap.set("n", "<leader>bg", function()
+  local bg = vim.opt.background:get()
+  if bg == "dark" then
+    vim.cmd "set background=light"
+  else
+    vim.cmd "set background=dark"
+  end
+end)
