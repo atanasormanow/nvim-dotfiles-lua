@@ -17,9 +17,6 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
--- maybe rebind this to something useful
-vim.keymap.set("n", "Q", "<nop>")
-
 -- navigate/move tabs
 vim.keymap.set("n", "gj", "gT")
 vim.keymap.set("n", "gk", "gt")
@@ -43,6 +40,9 @@ vim.keymap.set("i", "jj", "<esc>")
 vim.keymap.set("i", "kj", "<esc>")
 vim.keymap.set("i", "jk", "<esc>")
 
+-- delete character after cursor
+vim.keymap.set("i", "<C-l>", "<Del>")
+
 -- easier normal mode when in terminal mode
 vim.keymap.set("t", "<C-n>", "<C-\\><C-n>")
 
@@ -62,7 +62,7 @@ vim.keymap.set("n", "<leader><CR>",
 )
 
 -- clear highligts
-vim.keymap.set("n", "<leader>n", "<cmd>noh<CR>")
+vim.keymap.set("n", "Q", "<cmd>noh<CR>")
 
 -- format file/selection
 vim.keymap.set("n", "<leader>=", "<cmd>LspZeroFormat<CR>")
