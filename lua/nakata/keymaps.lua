@@ -64,6 +64,12 @@ vim.keymap.set("n", "<leader><CR>",
 -- clear highligts
 vim.keymap.set("n", "Q", "<cmd>noh<CR>")
 
+-- open command line history
+vim.keymap.set("n", "<leader>:", "q:")
+
+-- "exit anyways"
+vim.keymap.set("n", "q:", "<cmd>q<CR>")
+
 -- format file/selection
 vim.keymap.set("n", "<leader>=", "<cmd>LspZeroFormat<CR>")
 vim.keymap.set("v", "<leader>=", "<cmd>LspZeroFormat<CR>")
