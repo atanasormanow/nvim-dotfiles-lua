@@ -70,6 +70,9 @@ vim.keymap.set("n", "<leader>:", "q:")
 -- "exit anyways"
 vim.keymap.set("n", "q:", "<cmd>q<CR>")
 
+-- Jump to last non-blank instead
+vim.keymap.set("n", "$", "g_")
+
 -- format file/selection
 vim.keymap.set("n", "<leader>=", "<cmd>LspZeroFormat<CR>")
 vim.keymap.set("v", "<leader>=", "<cmd>LspZeroFormat<CR>")
@@ -94,8 +97,15 @@ vim.keymap.set("n", "<leader>m", function()
   vim.notify("Mouse " .. state)
 end)
 
--- toggle background (light/dark)
+-- toggle background transparency
 vim.keymap.set("n", "<leader>bg", function()
+  local gruvbox = require("gruvbox")
+  gruvbox.setup({ transparent_mode = not gruvbox.config.transparent_mode })
+  vim.cmd("colorscheme gruvbox")
+end)
+
+-- toggle background (light/dark)
+vim.keymap.set("n", "<leader>bbg", function()
   local bg = vim.opt.background:get()
   if bg == "dark" then
     vim.cmd "set background=light"
@@ -103,3 +113,4 @@ vim.keymap.set("n", "<leader>bg", function()
     vim.cmd "set background=dark"
   end
 end)
+
