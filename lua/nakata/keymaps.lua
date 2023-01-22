@@ -105,12 +105,12 @@ vim.keymap.set("n", "<leader>bg", function()
 end)
 
 -- toggle background (light/dark)
-vim.keymap.set("n", "<leader>bbg", function()
-  local bg = vim.opt.background:get()
-  if bg == "dark" then
-    vim.cmd "set background=light"
-  else
-    vim.cmd "set background=dark"
-  end
-end)
+-- vim.keymap.set("n", "<leader>bbg", function()
+--   local bg = vim.opt.background:get()
+--   if bg == "dark" then
+--     vim.cmd "set background=light"
+--   else
+--     vim.cmd "set background=dark"
+--   end
+-- end)
 
