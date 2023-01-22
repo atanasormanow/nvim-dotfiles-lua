@@ -6,7 +6,7 @@ vim.opt.mouse = nil                   -- disable mouse
 
 vim.opt.number = true                 -- current line number for relative numbers
 vim.opt.relativenumber = true         -- show line nubers relative to the cursor
---vim.opt.scrolloff = 4                 -- show first/last lines when scrolling
+-- vim.opt.scrolloff = 4                 -- show first/last lines when scrolling
 
 vim.opt.tabstop = 2                   -- spaces per tab
 vim.opt.softtabstop = 2               -- in edit mode

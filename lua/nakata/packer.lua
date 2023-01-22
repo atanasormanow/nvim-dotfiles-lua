@@ -1,4 +1,4 @@
--- Only required if you have packer configured as `opt`
+            -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -10,7 +10,9 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons' }
   })
 
-  use("ellisonleao/gruvbox.nvim")
+  use('ellisonleao/gruvbox.nvim')
+
+  use('karb94/neoscroll.nvim')
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
