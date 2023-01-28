@@ -17,6 +17,9 @@ require('neoscroll').setup({
 })
 
 local t = {}
-t['<C-u>'] = { 'scroll', { '-vim.wo.scroll', 'true', '350', 'sine', [['center']] } }
-t['<C-d>'] = { 'scroll', { 'vim.wo.scroll', 'true', '350', 'sine', [['center']] } }
+t['<C-u>'] = { 'scroll', { '-vim.wo.scroll', 'true', '350', [['center']] } }
+t['<C-d>'] = { 'scroll', { 'vim.wo.scroll', 'true', '350', [['center']] } }
+t['<C-b>'] = { 'scroll', { '-vim.api.nvim_win_get_height(0)', 'true', '450', [['center']] } }
+t['<C-f>'] = { 'scroll', { 'vim.api.nvim_win_get_height(0)', 'true', '450', [['center']] } }
+
 require('neoscroll.config').set_mappings(t)
