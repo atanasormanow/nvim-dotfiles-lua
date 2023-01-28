@@ -104,13 +104,12 @@ vim.keymap.set("n", "<leader>bg", function()
   vim.cmd("colorscheme gruvbox")
 end)
 
--- toggle background (light/dark)
--- vim.keymap.set("n", "<leader>bbg", function()
---   local bg = vim.opt.background:get()
---   if bg == "dark" then
---     vim.cmd "set background=light"
---   else
---     vim.cmd "set background=dark"
---   end
--- end)
-
+-- toggle colorcolumn at 81
+vim.keymap.set("n", "<leader>|", function()
+  local state = vim.opt.colorcolumn:get()
+  if next(state) == nil then
+    vim.cmd "set colorcolumn=81"
+  else
+    vim.cmd "set colorcolumn="
+  end
+end)

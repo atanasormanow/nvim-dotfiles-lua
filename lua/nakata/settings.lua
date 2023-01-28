@@ -36,7 +36,7 @@ vim.opt.encoding = "utf-8"            -- The encoding in which files are display
 vim.opt.fileencoding = "utf-8"        -- The encoding in which files are saved
 
 vim.opt.textwidth = 80
-vim.opt.colorcolumn = "81"
+-- vim.opt.colorcolumn = "81"            -- display the said column colored
 vim.opt.cursorline = true             -- highlight current cursorline
 
 vim.g.mapleader = " "
