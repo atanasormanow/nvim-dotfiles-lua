@@ -34,6 +34,7 @@ vim.opt.wildmode = "longest,list"     -- get bash-like tab completions
 vim.opt.hidden = true                    -- Keep unsaved changes in closed buffers
 vim.opt.encoding = "utf-8"            -- The encoding in which files are displayed
 vim.opt.fileencoding = "utf-8"        -- The encoding in which files are saved
+vim.opt.swapfile = false
 
 vim.opt.textwidth = 80
 -- vim.opt.colorcolumn = "81"            -- display the said column colored
