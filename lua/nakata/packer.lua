@@ -1,4 +1,4 @@
-            -- Only required if you have packer configured as `opt`
+-- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
   })
 
   use('ellisonleao/gruvbox.nvim')
+
+  use('norcalli/nvim-colorizer.lua')
 
   use('karb94/neoscroll.nvim')
 
