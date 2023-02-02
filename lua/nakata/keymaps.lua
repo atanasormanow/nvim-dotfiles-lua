@@ -83,6 +83,9 @@ vim.keymap.set("n", "<leader>sd", "<cmd>DeleteSession<CR>")
 vim.keymap.set("n", "<leader>s/", "<cmd>Autosession search<CR>")
 vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<CR>")
 
+-- toggle undotree
+vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
+
 -- toggle mouse
 vim.keymap.set("n", "<leader>m", function()
   local mouse_opt = vim.opt.mouse:get()
