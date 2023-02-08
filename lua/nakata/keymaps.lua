@@ -17,6 +17,9 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
+-- Deleta a line without the newline
+vim.keymap.set("n", "dl", "0d$")
+
 -- navigate/move tabs
 vim.keymap.set("n", "gj", "gT")
 vim.keymap.set("n", "gk", "gt")
