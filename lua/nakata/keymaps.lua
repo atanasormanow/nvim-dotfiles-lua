@@ -89,6 +89,9 @@ vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<CR>")
 -- toggle undotree
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
 
+-- prevent (*) from jumping to next match
+vim.keymap.set("n", "*", "*``")
+
 -- toggle mouse
 vim.keymap.set("n", "<leader>m", function()
   local mouse_opt = vim.opt.mouse:get()
