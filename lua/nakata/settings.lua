@@ -45,4 +45,7 @@ vim.g.mapleader = " "
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
 -- set explicit filetype for .pl
-vim.cmd "au BufNewFile,BufRead *.pl setf prolog"
+vim.cmd "autocmd BufNewFile,BufRead *.pl setf prolog"
+
+-- Run R scripts with make
+vim.cmd "autocmd FileType r setlocal makeprg=/usr/bin/Rscript\\ %"
