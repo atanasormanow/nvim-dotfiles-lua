@@ -160,6 +160,11 @@ _G.packer_plugins = {
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
+  ["nvim-bqf"] = {
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-bqf",
+    url = "https://github.com/kevinhwang91/nvim-bqf"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-cmp",

@@ -34,6 +34,8 @@ return require('packer').startup(function(use)
 
   use('lervag/vimtex')
 
+  use {'kevinhwang91/nvim-bqf'}
+
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
