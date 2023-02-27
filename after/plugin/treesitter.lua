@@ -1,3 +1,6 @@
+-- NOTE: syntax can interfere with treesitter and colors change at random
+vim.opt.syntax = nil
+
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "help", "latex", "javascript", "typescript", "c", "cpp", "lua", "rust",
