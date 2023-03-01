@@ -1,9 +1,6 @@
--- NOTE: syntax can interfere with treesitter and colors change at random
-vim.opt.syntax = nil
-
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
-    "help", "latex", "javascript", "typescript", "c", "cpp", "lua", "rust",
+    "help", "javascript", "typescript", "c", "cpp", "lua", "rust",
     "haskell", "scheme", "racket"
   },
 
@@ -12,6 +9,7 @@ require 'nvim-treesitter.configs'.setup {
 
   highlight = {
     enable = true,
+    disable = { "latex" },
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
