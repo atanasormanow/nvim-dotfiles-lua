@@ -74,10 +74,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
+  ["alpha-nvim"] = {
     loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
   },
   ["auto-session"] = {
     config = { "\27LJ\2\n‰\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\4\0\0\a~/\16~/Downloads\6/\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0" },
@@ -160,11 +160,6 @@ _G.packer_plugins = {
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
-  ["nvim-bqf"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-bqf",
-    url = "https://github.com/kevinhwang91/nvim-bqf"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -180,6 +175,17 @@ _G.packer_plugins = {
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-man"] = {
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-man",
+    url = "https://github.com/paretje/nvim-man"
+  },
+  ["nvim-surround"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -193,12 +199,17 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   undotree = {
     loaded = true,
@@ -210,21 +221,6 @@ _G.packer_plugins = {
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-repeat"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/vim-repeat",
-    url = "https://github.com/tpope/vim-repeat"
-  },
-  ["vim-startify"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/vim-startify",
-    url = "https://github.com/mhinz/vim-startify"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
   vimtex = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/vimtex",
@@ -233,6 +229,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 -- Config for: auto-session
 time([[Config for auto-session]], true)
 try_loadstring("\27LJ\2\n‰\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\31auto_session_suppress_dirs\1\4\0\0\a~/\16~/Downloads\6/\1\0\1\14log_level\nerror\nsetup\17auto-session\frequire\0", "config", "auto-session")

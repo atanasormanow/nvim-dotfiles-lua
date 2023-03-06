@@ -5,12 +5,11 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
-  use({
-    'ibhagwan/fzf-lua',
-    requires = { 'nvim-tree/nvim-web-devicons' }
-  })
+  use('ibhagwan/fzf-lua')
 
   use('ellisonleao/gruvbox.nvim')
+
+  use('kyazdani42/nvim-web-devicons')
 
   use('norcalli/nvim-colorizer.lua')
 
