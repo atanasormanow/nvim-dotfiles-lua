@@ -92,6 +92,8 @@ vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
 -- prevent (*) from jumping to next match
 vim.keymap.set("n", "*", "*``")
 
+vim.keymap.set("c", "cd.", "cd %:p:h")
+
 -- toggle mouse
 vim.keymap.set("n", "<leader>m", function()
   local mouse_opt = vim.opt.mouse:get()

@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
     end
   })
 
-  use {
+  use({
     'VonHeikemen/lsp-zero.nvim',
     requires = {
       -- LSP Support
@@ -84,5 +84,5 @@ return require('packer').startup(function(use)
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
     }
-  }
+  })
 end)
