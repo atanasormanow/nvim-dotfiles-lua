@@ -24,27 +24,36 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
-  use('tpope/vim-surround')
+  use('paretje/nvim-man')
 
-  use('tpope/vim-repeat')
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
 
-  use('mhinz/vim-startify')
+  use({ "akinsho/toggleterm.nvim", tag = '*' })
+
+  use({
+    'goolord/alpha-nvim',
+    -- branch = 'feature/startify-fortune',
+    -- requires = { 'BlakeJC94/alpha-nvim-fortune' }
+  })
 
   use('preservim/nerdcommenter')
 
   use('lervag/vimtex')
-
-  use {'kevinhwang91/nvim-bqf'}
 
   use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use('nvim-lualine/lualine.nvim')
 
   use({
     'rmagatti/auto-session',
