@@ -2,8 +2,9 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- move visually selected lines
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- NOTE: Doesn't work with with <cmd> instead of ":"
+vim.keymap.set("v", "<C-j>", ":m '>+1<return>gv=gv")
+vim.keymap.set("v", "<C-k>", ":m '<-2<return>gv=gv")
 
 -- Don't jump at the end when concatenating lines
 -- vim.keymap.set("n", "J", "mzJ`z")
@@ -48,6 +49,7 @@ vim.keymap.set("i", "<C-l>", "<Del>")
 
 -- easier normal mode when in terminal mode
 vim.keymap.set("t", "<C-n>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 
 -- open new tab
 vim.keymap.set("n", "<leader>t", "<cmd>tabnew<CR>")
@@ -60,9 +62,9 @@ vim.keymap.set("n", "<leader>j", "<C-w>s")
 vim.keymap.set("n", "<leader>l", "<C-w>v")
 
 -- open terminal in smaller horizontal split
-vim.keymap.set("n", "<leader><CR>",
-  "<cmd>split | resize -5 | terminal<return>i"
-)
+-- vim.keymap.set("n", "<leader><CR>",
+--   "<cmd>split | resize -5 | terminal<return>i"
+-- )
 
 -- clear highligts
 vim.keymap.set("n", "Q", "<cmd>noh<CR>")
