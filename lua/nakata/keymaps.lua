@@ -92,7 +92,7 @@ vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<CR>")
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
 
 -- prevent (*) from jumping to next match
-vim.keymap.set("n", "*", "*``")
+vim.keymap.set("n", "*", "*``", { silent = true })
 
 vim.keymap.set("c", "cd.", "cd %:p:h")
 
