@@ -54,15 +54,7 @@ return require('packer').startup(function(use)
 
   use('nvim-lualine/lualine.nvim')
 
-  use({
-    'rmagatti/auto-session',
-    config = function()
-      require("auto-session").setup {
-        log_level = "error",
-        auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
-      }
-    end
-  })
+  use('rmagatti/auto-session')
 
   use({
     'VonHeikemen/lsp-zero.nvim',
