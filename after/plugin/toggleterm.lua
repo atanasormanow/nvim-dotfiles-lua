@@ -25,7 +25,7 @@ require("toggleterm").setup {
 
   persist_size = false,
   close_on_exit = true, -- close the terminal window when the process exits
-  -- TODO: can't understand what this does
+  -- TODO: Doesn't seem to do anything *shrug*
   -- auto_scroll = true, -- automatically scroll to the bottom on terminal output
 }
 
@@ -44,7 +44,7 @@ local term_v = Terminal:new({ direction = 'vertical' })
 local term_h = Terminal:new({ direction = 'horizontal' })
 local term_t = Terminal:new({ direction = 'tab' })
 
-function _toggle_term(type)
+local function _toggle_term(type)
   if type == 'f' then term_f:toggle()
   elseif type == 'h' then term_h:toggle()
   elseif type == 'v' then term_v:toggle()
@@ -52,8 +52,10 @@ function _toggle_term(type)
   end
 end
 
+-- TODO: Can't i just call the function?
 vim.api.nvim_set_keymap("n", "<leader><return>", "<cmd>lua _toggle_term('h')<return>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>\\", "<cmd>lua _toggle_term('f')<return>", { noremap = true })
+
 -- TODO: i like more the keymap t->:tabnew
 -- vim.api.nvim_set_keymap("n", "<leader>tt", "<cmd>lua _toggle_term('t')<return>", { noremap = true })
 -- vim.api.nvim_set_keymap("n", "<leader>tv", "<cmd>lua _toggle_term('v')<return>", { noremap = true })
