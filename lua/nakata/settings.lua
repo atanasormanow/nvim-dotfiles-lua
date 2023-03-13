@@ -17,6 +17,8 @@ vim.opt.autoindent = true             -- indent a new line the same amount as th
 
 vim.opt.showcmd = true                -- commands in bottom bar
 vim.opt.wildmenu = true               -- autocomplete for command menu
+vim.opt.wildmode = "list:longest,full"-- get bash-like tab completions
+vim.opt.wildoptions = "pum"           -- get bash-like tab completions
 vim.opt.showmatch = true              -- matching braces
 
 vim.opt.hlsearch = true               -- highlight while searching
@@ -30,7 +32,6 @@ vim.opt.listchars = "trail:•"         -- set trailing spaces
 vim.opt.splitright = true             -- open vertical splits on the right side
 vim.opt.splitbelow = true             -- split horizontal below
 
-vim.opt.wildmode = "longest,list"     -- get bash-like tab completions
 vim.opt.hidden = true                    -- Keep unsaved changes in closed buffers
 vim.opt.encoding = "utf-8"            -- The encoding in which files are displayed
 vim.opt.fileencoding = "utf-8"        -- The encoding in which files are saved

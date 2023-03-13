@@ -38,16 +38,24 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- easier jump between matching braces
 vim.keymap.set("", "<tab>", "%")
 
+-- move trough visual lines instead
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
 -- easier normal mode
 vim.keymap.set("i", "kk", "<esc>")
 vim.keymap.set("i", "jj", "<esc>")
 vim.keymap.set("i", "kj", "<esc>")
 vim.keymap.set("i", "jk", "<esc>")
 
+-- resize windows with arrows
+vim.keymap.set("n", "<up>", "<cmd>resize +2<return>")
+vim.keymap.set("n", "<down>", "<cmd>resize -2<return>")
+
 -- delete character after cursor
 vim.keymap.set("i", "<C-l>", "<Del>")
 
--- easier normal mode when in terminal mode
+-- terminal normal mode
 vim.keymap.set("t", "<C-n>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 
