@@ -51,6 +51,7 @@ function _toggle_horiz_term()
 end
 
 -- TODO: Can't i just call the function?
-vim.api.nvim_set_keymap("n", "<leader><return>", "<cmd>lua _toggle_term('h')<return>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader><return>", "<cmd>lua _toggle_horiz_term()<return>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>\\", "<cmd>lua _toggle_floating_term()<return>", { noremap = true })
-vim.api.nvim_set_keymap("t", "e<return>", "<cmd>ToggleTerm<return>", { noremap = true })
+-- TODO should be restricted to ft=toggleterm, otherwise tries to execute in fzf
+-- vim.api.nvim_set_keymap("t", "e<return>", "<cmd>ToggleTerm<return>", { noremap = true })
