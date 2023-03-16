@@ -56,6 +56,8 @@ return require('packer').startup(function(use)
 
   use('rmagatti/auto-session')
 
+  use('rcarriga/nvim-notify')
+
   use({
     'VonHeikemen/lsp-zero.nvim',
     requires = {
