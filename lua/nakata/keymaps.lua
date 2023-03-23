@@ -104,6 +104,11 @@ vim.keymap.set("n", "*", "*``", { silent = true })
 
 vim.keymap.set("c", "cd.", "cd %:p:h")
 
+vim.keymap.set(
+  "c", "date",
+  "put =strftime('# %b %d %X')"
+)
+
 -- toggle mouse
 vim.keymap.set("n", "<leader>m", function()
   local mouse_opt = vim.opt.mouse:get()
