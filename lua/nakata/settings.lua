@@ -45,6 +45,8 @@ vim.g.mapleader = " "
 
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
+vim.opt.matchpairs:append('<:>')
+
 -- set explicit filetype for .pl
 vim.cmd "autocmd BufNewFile,BufRead *.pl setf prolog"
 
