@@ -65,10 +65,6 @@ vim.keymap.set("n", "<leader>t", "<cmd>tabnew<CR>")
 -- open last opened buffer
 vim.keymap.set("n", "<leader><tab>", "<C-^>")
 
--- open splits easier
-vim.keymap.set("n", "<leader>j", "<C-w>s")
-vim.keymap.set("n", "<leader>l", "<C-w>v")
-
 -- open terminal in smaller horizontal split
 -- vim.keymap.set("n", "<leader><CR>",
 --   "<cmd>split | resize -5 | terminal<return>i"
