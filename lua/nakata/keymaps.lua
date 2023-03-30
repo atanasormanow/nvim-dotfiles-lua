@@ -3,20 +3,15 @@ vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
 -- move visually selected lines
 -- NOTE: Doesn't work with with <cmd> instead of ":"
-vim.keymap.set("v", "<C-j>", ":m '>+1<return>gv=gv")
-vim.keymap.set("v", "<C-k>", ":m '<-2<return>gv=gv")
+vim.keymap.set("x", "<C-j>", ":m '>+1<return>gv=gv")
+vim.keymap.set("x", "<C-k>", ":m '<-2<return>gv=gv")
 
 -- Don't jump at the end when concatenating lines
 -- vim.keymap.set("n", "J", "mzJ`z")
 
--- Center cursor vertically when scrolling
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
 -- Don't overwrite the paste buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set({ "n", "x" }, "<leader>d", "\"_d")
 
 -- Deleta a line without the newline
 vim.keymap.set("n", "dl", "0d$")
@@ -38,9 +33,15 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- easier jump between matching braces
 vim.keymap.set("", "<tab>", "%")
 
--- move trough visual lines instead
-vim.keymap.set("n", "j", "gj")
-vim.keymap.set("n", "k", "gk")
+--" move between visual lines if there is no count prefix
+vim.keymap.set(
+  { "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'",
+  { expr = true, noremap = true }
+)
+vim.keymap.set(
+  { "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'",
+  { expr = true, noremap = true }
+)
 
 -- easier normal mode
 vim.keymap.set("i", "kk", "<esc>")
@@ -60,40 +61,39 @@ vim.keymap.set("t", "<C-n>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-[>", "<C-\\><C-n>")
 
 -- open new tab
-vim.keymap.set("n", "<leader>t", "<cmd>tabnew<CR>")
+vim.keymap.set("n", "<leader>t", "<cmd>tabnew<return>")
 
 -- open last opened buffer
 vim.keymap.set("n", "<leader><tab>", "<C-^>")
 
 -- open terminal in smaller horizontal split
--- vim.keymap.set("n", "<leader><CR>",
+-- vim.keymap.set("n", "<leader><return>",
 --   "<cmd>split | resize -5 | terminal<return>i"
 -- )
 
 -- clear highligts
-vim.keymap.set("n", "Q", "<cmd>noh<CR>")
+vim.keymap.set("n", "Q", "<cmd>noh<return>")
 
 -- open command line history
 vim.keymap.set("n", "<leader>:", "q:")
 
 -- "exit anyways"
-vim.keymap.set("n", "q:", "<cmd>q<CR>")
+vim.keymap.set("n", "q:", "<cmd>q<return>")
 
 -- Jump to last non-blank instead
 vim.keymap.set("n", "$", "g_")
 
 -- format file/selection
-vim.keymap.set("n", "<leader>=", "<cmd>LspZeroFormat<CR>")
-vim.keymap.set("v", "<leader>=", "<cmd>LspZeroFormat<CR>")
+vim.keymap.set({ "n", "x" }, "<leader>=", "<cmd>LspZeroFormat<return>")
 
 -- manage sessions
-vim.keymap.set("n", "<leader>ss", "<cmd>SaveSession<CR>")
-vim.keymap.set("n", "<leader>sd", "<cmd>DeleteSession<CR>")
-vim.keymap.set("n", "<leader>s/", "<cmd>Autosession search<CR>")
-vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<CR>")
+vim.keymap.set("n", "<leader>ss", "<cmd>SaveSession<return>")
+vim.keymap.set("n", "<leader>sd", "<cmd>DeleteSession<return>")
+vim.keymap.set("n", "<leader>s/", "<cmd>Autosession search<return>")
+vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<return>")
 
 -- toggle undotree
-vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>")
+vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<return>")
 
 -- prevent (*) from jumping to next match
 vim.keymap.set("n", "*", "*``", { silent = true })
@@ -102,7 +102,7 @@ vim.keymap.set("c", "cd.", "cd %:p:h")
 
 vim.keymap.set(
   "c", "date",
-  "put =strftime('# %b %d %X')"
+  "put =strftime('# %a, %b %d, %X :')"
 )
 
 -- toggle mouse
