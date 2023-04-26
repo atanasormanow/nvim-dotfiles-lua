@@ -86,12 +86,6 @@ vim.keymap.set("n", "$", "g_")
 -- format file/selection
 vim.keymap.set({ "n", "x" }, "<leader>=", "<cmd>LspZeroFormat<return>")
 
--- manage sessions
-vim.keymap.set("n", "<leader>ss", "<cmd>SaveSession<return>")
-vim.keymap.set("n", "<leader>sd", "<cmd>DeleteSession<return>")
-vim.keymap.set("n", "<leader>s/", "<cmd>Autosession search<return>")
-vim.keymap.set("n", "<leader>sD", "<cmd>DeleteSession<return>")
-
 -- toggle undotree
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<return>")
 
