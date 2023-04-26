@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
 
   use('ibhagwan/fzf-lua')
 
+  use('dyng/ctrlsf.vim')
+
   use('ellisonleao/gruvbox.nvim')
 
   use('kyazdani42/nvim-web-devicons')
@@ -34,6 +36,8 @@ return require('packer').startup(function(use)
       })
     end
   })
+
+  use('easymotion/vim-easymotion')
 
   use({ "akinsho/toggleterm.nvim", tag = '*' })
 

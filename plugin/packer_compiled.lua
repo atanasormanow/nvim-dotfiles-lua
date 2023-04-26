@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["ctrlsf.vim"] = {
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/ctrlsf.vim",
+    url = "https://github.com/dyng/ctrlsf.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -234,6 +239,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/easymotion/vim-easymotion"
   },
   ["vim-fugitive"] = {
     loaded = true,
