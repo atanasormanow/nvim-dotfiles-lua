@@ -1,6 +1,12 @@
-require'fzf-lua'.setup {
+require 'fzf-lua'.setup {
   winopts = {
     fullscreen = true
+  },
+  keymap = {
+    builtin = {
+      ["<C-u>"] = "preview-page-up",
+      ["<C-d>"] = "preview-page-down",
+    }
   }
 }
 
