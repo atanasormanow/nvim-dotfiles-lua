@@ -58,7 +58,11 @@ return require('packer').startup(function(use)
 
   use('nvim-lualine/lualine.nvim')
 
-  use('rmagatti/auto-session')
+  use({
+    'rmagatti/auto-session',
+    -- Fixed commit due to breaking changes
+    commit = '1d3dd70a2d48e0f3441128eb4fb0b437a0bf2cc4',
+  })
 
   use('rcarriga/nvim-notify')
 
