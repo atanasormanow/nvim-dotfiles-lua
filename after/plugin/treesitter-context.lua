@@ -1,6 +1,6 @@
 require 'treesitter-context'.setup {
   enable = true,
-  max_lines = 1,
+  max_lines = 2,
   trim_scope = 'inner',
   min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
   patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
