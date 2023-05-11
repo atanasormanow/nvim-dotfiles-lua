@@ -1,48 +1,85 @@
-vim.opt.langmap = "чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\\|,"               -- basic keyboard layout mapping
-vim.opt.clipboard = "unnamedplus"     -- using system clipboard
-vim.opt.termguicolors = true          -- more colors
-vim.opt.updatetime = 50               -- use shorter update time (default 4k)
-vim.opt.mouse = nil                   -- disable mouse
+vim.g.mapleader = " "
 
-vim.opt.number = true                 -- current line number for relative numbers
-vim.opt.relativenumber = true         -- show line nubers relative to the cursor
--- vim.opt.scrolloff = 4                 -- show first/last lines when scrolling
+-- basic bg phonetic layout
+vim.opt.langmap = "чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\\|,"
 
-vim.opt.tabstop = 2                   -- spaces per tab
-vim.opt.softtabstop = 2               -- in edit mode
-vim.opt.shiftwidth = 2                -- width for autoindents
-vim.opt.expandtab = true              -- tabs to spaces
+-- using system clipboard
+vim.opt.clipboard = "unnamedplus"
+
+-- more colors
+vim.opt.termguicolors = true
+
+-- use shorter update time (default 4k)
+vim.opt.updatetime = 50
+
+-- disable mouse
+vim.opt.mouse = nil
+
+-- current line number for relative numbers
+vim.opt.number = true
+-- show line nubers relative to the cursor
+vim.opt.relativenumber = true
+-- show first/last lines when scrolling
+-- vim.opt.scrolloff = 4
+
+-- spaces per tab
+vim.opt.tabstop = 2
+-- in edit mode
+vim.opt.softtabstop = 2
+-- width for autoindents
+vim.opt.shiftwidth = 2
+-- tabs to spaces
+vim.opt.expandtab = true
+-- indent a new line the same amount as the line just typed
+vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.autoindent = true             -- indent a new line the same amount as the line just typed
 
-vim.opt.showcmd = true                -- commands in bottom bar
-vim.opt.wildmenu = true               -- autocomplete for command menu
-vim.opt.wildmode = "list:longest,full"-- get bash-like tab completions
-vim.opt.wildoptions = "pum"           -- get bash-like tab completions
-vim.opt.showmatch = true              -- matching braces
+-- commands in bottom bar
+vim.opt.showcmd = true
+-- autocomplete for command menu
+vim.opt.wildmenu = true
+-- get bash-like tab completions
+vim.opt.wildmode = "list:longest,full"
+-- get bash-like tab completions
+vim.opt.wildoptions = "pum"
 
-vim.opt.hlsearch = true               -- highlight while searching
-vim.opt.incsearch = true              -- search while typing
-vim.opt.ignorecase = true             -- case insensitive searching
-vim.opt.smartcase = true              -- case sensitive if search has uppercase
+-- show matching characters
+vim.opt.showmatch = true
+vim.opt.matchpairs:append('<:>')
 
-vim.opt.list = true                   -- make whitespace visable
-vim.opt.listchars = "trail:•"         -- set trailing spaces
+-- search while typing
+vim.opt.incsearch = true
+-- highlight while searching
+vim.opt.hlsearch = true
+-- case insensitive searching
+vim.opt.ignorecase = true
+-- case sensitive if search has uppercase
+vim.opt.smartcase = true
 
-vim.opt.splitright = true             -- open vertical splits on the right side
-vim.opt.splitbelow = true             -- split horizontal below
+-- make whitespace visable
+vim.opt.list = true
+-- set trailing spaces
+vim.opt.listchars = "trail:•"
 
-vim.opt.hidden = true                    -- Keep unsaved changes in closed buffers
-vim.opt.encoding = "utf-8"            -- The encoding in which files are displayed
-vim.opt.fileencoding = "utf-8"        -- The encoding in which files are saved
+-- open vertical splits on the right
+vim.opt.splitright = true
+-- open horizontal splits on the bottom
+vim.opt.splitbelow = true
+
+-- Keep unsaved changes in closed buffers
+vim.opt.hidden = true
+-- The encoding in which files are displayed
+vim.opt.encoding = "utf-8"
+-- The encoding in which files are saved
+vim.opt.fileencoding = "utf-8"
 vim.opt.swapfile = false
 
 vim.opt.textwidth = 80
--- vim.opt.colorcolumn = "81"            -- display the said column colored
-vim.opt.cursorline = true             -- highlight current cursorline
+-- display the said column colored
 
-vim.g.mapleader = " "
+-- Set colorcolumn based on textwidth
+vim.opt.colorcolumn = tostring(vim.opt.textwidth:get() + 1)
+-- highlight current cursorline
+vim.opt.cursorline = true
 
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
-
-vim.opt.matchpairs:append('<:>')
