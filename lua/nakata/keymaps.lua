@@ -104,10 +104,10 @@ vim.keymap.set("n", "<leader>m", function()
   local mouse_opt = vim.opt.mouse:get()
   local state
   if mouse_opt["a"] then
-    vim.cmd "set mouse="
+    vim.opt.mouse = nil
     state = "OFF"
   else
-    vim.cmd "set mouse=a"
+    vim.opt.mouse = "a"
     state = "ON"
   end
   vim.notify("Mouse " .. state)
@@ -124,8 +124,8 @@ end)
 vim.keymap.set("n", "<leader>|", function()
   local state = vim.opt.colorcolumn:get()
   if next(state) == nil then
-    vim.cmd "set colorcolumn=81"
+    vim.opt.colorcolumn = "81"
   else
-    vim.cmd "set colorcolumn="
+    vim.opt.colorcolumn = nil
   end
 end)
