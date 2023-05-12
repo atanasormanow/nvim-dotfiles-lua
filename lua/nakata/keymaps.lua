@@ -124,7 +124,7 @@ end)
 vim.keymap.set("n", "<leader>|", function()
   local state = vim.opt.colorcolumn:get()
   if next(state) == nil then
-    vim.opt.colorcolumn = "81"
+    vim.opt.colorcolumn = tostring(vim.opt.textwidth:get() + 1)
   else
     vim.opt.colorcolumn = nil
   end
