@@ -78,7 +78,7 @@ vim.opt.textwidth = 80
 -- display the said column colored
 
 -- Set colorcolumn based on textwidth
-vim.opt.colorcolumn = tostring(vim.opt.textwidth:get() + 1)
+vim.opt.colorcolumn = nil
 -- highlight current cursorline
 vim.opt.cursorline = true
 
