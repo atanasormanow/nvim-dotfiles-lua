@@ -3,8 +3,9 @@ vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
 -- move visually selected lines
 -- NOTE: Doesn't work with with <cmd> instead of ":"
-vim.keymap.set("x", "<C-j>", ":m '>+1<return>gv=gv")
-vim.keymap.set("x", "<C-k>", ":m '<-2<return>gv=gv")
+-- NOTE: Now used for treesitter node selection
+-- vim.keymap.set("x", "<C-j>", ":m '>+1<return>gv=gv")
+-- vim.keymap.set("x", "<C-k>", ":m '<-2<return>gv=gv")
 
 -- Don't jump at the end when concatenating lines
 -- vim.keymap.set("n", "J", "mzJ`z")

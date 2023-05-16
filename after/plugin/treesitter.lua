@@ -22,10 +22,10 @@ require 'nvim-treesitter.configs'.setup {
     enable = true,
     keymaps = {
       -- set to `false` to disable one of the mappings
-      init_selection = "gnn",
-      node_incremental = "<C-l>",
-      scope_incremental = false, -- NOTE: not sure how this works
-      node_decremental = "<C-h>",
+      init_selection = "gnn", -- Same as incremental after entering visual mode
+      node_incremental = "<C-k>",
+      scope_incremental = "<C-h>",
+      node_decremental = "<C-j>",
     },
   },
 
