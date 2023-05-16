@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
+  ["nvim-ts-rainbow2"] = {
+    loaded = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow2",
+    url = "https://github.com/HiPhish/nvim-ts-rainbow2"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",

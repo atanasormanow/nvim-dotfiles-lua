@@ -21,6 +21,8 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter-context')
 
+  use('HiPhish/nvim-ts-rainbow2')
+
   use('mbbill/undotree')
 
   use('tpope/vim-fugitive')
