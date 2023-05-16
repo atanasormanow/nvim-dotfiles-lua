@@ -4,7 +4,10 @@ require('nvim-autopairs').setup({
   disable_in_replace_mode = true,
   map_cr = true,  -- put closing pair on a new line
   map_bs = true,  -- map the <BS> key
+
   map_c_h = true, -- Map the <C-h> key to delete a pair
+                  -- TODO: this causes an error sometimes
+
   map_c_w = true, -- map <c-w> to delete a pair if possible
   enable_moveright = true,
   enable_check_bracket_line = true,  -- check bracket in same line
