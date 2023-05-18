@@ -1,21 +1,31 @@
-local lsp = require('lsp-zero')
-
-lsp.preset('recommended')
-
-lsp.set_preferences({
-  suggest_lsp_servers = true,
-  setup_servers_on_start = true,
-  set_lsp_keymaps = true,
+local lsp = require('lsp-zero').preset({
+  float_border = 'rounded',
+  call_servers = 'local',
   configure_diagnostics = true,
-  cmp_capabilities = true,
-  manage_nvim_cmp = true,
-  sign_icons = {
-    error = '>>',
-    warn = '>>',
-    hint = '>>',
-    info = '>>'
-  }
+  setup_servers_on_start = true,
+  set_lsp_keymaps = {
+    preserve_mappings = false,
+    omit = { 'gi' },
+  },
+  manage_nvim_cmp = {
+    set_sources = 'recommended',
+    set_basic_mappings = true,
+    set_extra_mappings = false,
+    use_luasnip = true,
+    set_format = true,
+    documentation_window = true,
+  },
 })
+lsp.set_sign_icons({
+  error = '❌',
+  warn = '▲',
+  hint = '💡',
+  info = 'ℹ'
+})
+
+lsp.on_attach(function(client, bufnr)
+  vim.keymap.set('n', 'gI', '<cmd>lua vim.lsp.buf.implementation()<return>')
+end)
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
