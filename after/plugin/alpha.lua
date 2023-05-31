@@ -16,11 +16,11 @@ dashboard.section.header.val = {
 -- Set menu
 dashboard.section.buttons.val = {
   dashboard.button("e", " : New file", "<cmd>ene <BAR> startinsert <return>"),
-  dashboard.button("f", " : Find file", "<cmd>FzfLua files<return>"),
-  dashboard.button("o", "⏳: Open Recent", "<cmd>FzfLua oldfiles<return>"),
-  dashboard.button("s", "📂: Restore Session", "<cmd> lua _list_sessions()<return>"),
-  dashboard.button("n", "🔧: NVIM Config", "<cmd>cd ~/.config/nvim | RestoreSession<return>"),
-  dashboard.button("q", " : Quit NVIM", "<cmd>qa<return>"),
+  dashboard.button("f", "󰍉 : Find file", "<cmd>FzfLua files<return>"),
+  dashboard.button("o", " : Open Recent", "<cmd>FzfLua oldfiles<return>"),
+  dashboard.button("s", "󰣞 : Restore Session", "<cmd> lua _list_sessions()<return>"),
+  dashboard.button("n", "󰒓 : NVIM Config", "<cmd>cd ~/.config/nvim | RestoreSession<return>"),
+  dashboard.button("q", "󰗼 : Quit NVIM", "<cmd>qa<return>"),
 }
 
 -- Show fortunes/quotes on the bottom
