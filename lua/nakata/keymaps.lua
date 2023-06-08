@@ -24,6 +24,8 @@ vim.keymap.set("n", "gJ", "<cmd>tabmove -1<return>")
 vim.keymap.set("n", "gK", "<cmd>tabmove +1<return>")
 
 vim.keymap.set("n", "Y", "y$")
+vim.keymap.set("n", "yu", "yyP")
+vim.keymap.set("n", "yd", "yyp")
 
 -- navigate splits
 vim.keymap.set("n", "<C-h>", "<C-w>h")
