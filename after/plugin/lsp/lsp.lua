@@ -27,6 +27,9 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set('n', 'gI', '<cmd>lua vim.lsp.buf.implementation()<return>')
 end)
 
+local lsp_windows = require('lspconfig.ui.windows')
+lsp_windows.default_options.border = 'double'
+
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
