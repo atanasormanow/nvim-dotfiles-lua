@@ -1,9 +1,19 @@
 vim.api.nvim_create_user_command(
-  'Now',
+  'Datetime',
   function(_input)
     vim.cmd "put =strftime('%a, %b %d, %X')"
   end,
-  {bang = true, desc = 'Set the the current file\'s location to cwd'}
+  { bang = true, desc = 'Put the current timestamp under the cursor' }
+)
+
+vim.api.nvim_create_user_command(
+  'ToggleBackground',
+  function(_input)
+    local gruvbox = require("gruvbox")
+    gruvbox.setup({ transparent_mode = not gruvbox.config.transparent_mode })
+    vim.cmd("colorscheme gruvbox")
+  end,
+  { bang = true, desc = 'Toggle transparent background' }
 )
 
 -- set explicit filetype for .pl

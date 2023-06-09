@@ -109,13 +109,6 @@ vim.keymap.set("n", "<leader>m", function()
   vim.notify("Mouse " .. state)
 end)
 
--- toggle background transparency
-vim.keymap.set("n", "<leader>bg", function()
-  local gruvbox = require("gruvbox")
-  gruvbox.setup({ transparent_mode = not gruvbox.config.transparent_mode })
-  vim.cmd("colorscheme gruvbox")
-end)
-
 -- toggle colorcolumn at 81
 vim.keymap.set("n", "<leader>|", function()
   local state = vim.opt.colorcolumn:get()
