@@ -52,10 +52,6 @@ vim.keymap.set("i", "jj", "<esc>")
 vim.keymap.set("i", "kj", "<esc>")
 vim.keymap.set("i", "jk", "<esc>")
 
--- resize windows with arrows
-vim.keymap.set("n", "<up>", "<cmd>resize +2<return>")
-vim.keymap.set("n", "<down>", "<cmd>resize -2<return>")
-
 -- delete character after cursor
 vim.keymap.set("i", "<C-l>", "<Del>")
 
