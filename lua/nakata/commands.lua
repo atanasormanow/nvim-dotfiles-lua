@@ -1,3 +1,11 @@
+vim.api.nvim_create_user_command(
+  'Now',
+  function(_input)
+    vim.cmd "put =strftime('%a, %b %d, %X')"
+  end,
+  {bang = true, desc = 'Set the the current file\'s location to cwd'}
+)
+
 -- set explicit filetype for .pl
 vim.cmd "autocmd BufNewFile,BufRead *.pl setf prolog"
 
