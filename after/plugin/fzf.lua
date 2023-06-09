@@ -2,12 +2,13 @@ require 'fzf-lua'.setup {
   winopts = {
     fullscreen = true
   },
-  keymap = {
-    builtin = {
-      ["<C-u>"] = "preview-page-up",
-      ["<C-d>"] = "preview-page-down",
-    }
-  }
+  -- TODO: removesd the other keymaps
+  -- keymap = {
+  --   builtin = {
+  --     ["<C-u>"] = "preview-page-up",
+  --     ["<C-d>"] = "preview-page-down",
+  --   }
+  -- }
 }
 
 function _list_sessions()
