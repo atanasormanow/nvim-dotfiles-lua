@@ -27,3 +27,15 @@ vim.cmd "autocmd FileType scheme setlocal makeprg=/usr/bin/racket\\ %"
 
 -- Compile and run cpp files
 vim.cmd "autocmd FileType cpp setlocal makeprg=g++\\ %\\ -o\\ %<"
+-- Enable terminal debugger for Rust
+vim.api.nvim_create_autocmd(
+  'FileType',
+  {
+    pattern = 'rust',
+    callback = function()
+      vim.cmd [[packadd termdebug]]
+      -- TODO
+      -- vim.g.termdebugger = 'rust-gdb'
+    end
+  }
+)
