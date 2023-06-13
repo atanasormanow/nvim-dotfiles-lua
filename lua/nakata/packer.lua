@@ -70,8 +70,6 @@ return require('packer').startup(function(use)
 
   use('windwp/nvim-autopairs')
 
-  use('mfussenegger/nvim-dap')
-
   use({
     'VonHeikemen/lsp-zero.nvim',
     requires = {
