@@ -82,4 +82,11 @@ vim.opt.colorcolumn = nil
 -- highlight current cursorline
 vim.opt.cursorline = true
 
-vim.opt.completeopt = {"menu", "menuone", "noselect"}
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+
+
+-- TODO: use a before folder with plugn pre settings
+-- Plugin Related:
+-- ---------------
+-- disable default mappings for easy-motion
+vim.g.EasyMotion_do_mapping = 0
