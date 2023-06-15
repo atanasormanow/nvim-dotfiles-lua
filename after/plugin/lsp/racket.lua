@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>=', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
-require 'lspconfig'.racket_langserver.setup {
+require('lspconfig').racket_langserver.setup {
   on_attach = on_attach,
   cmd = { "racket", "--lib", "racket-langserver" },
   filetypes = { "racket", "scheme" }

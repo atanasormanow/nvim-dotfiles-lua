@@ -1,4 +1,4 @@
-local util = require 'lspconfig.util'
+local util = require('lspconfig.util')
 
 local texlab_build_status = vim.tbl_add_reverse_lookup {
   Success = 0,
@@ -68,7 +68,7 @@ return {
     cmd = { 'texlab' },
     filetypes = { 'tex', 'plaintex', 'bib' },
     root_dir = function(fname)
-      return util.root_pattern '.latexmkrc'(fname) or util.find_git_ancestor(fname)
+      return util.root_pattern '.latexmkrc' (fname) or util.find_git_ancestor(fname)
     end,
     single_file_support = true,
     settings = {

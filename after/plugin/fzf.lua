@@ -1,4 +1,4 @@
-require 'fzf-lua'.setup {
+require('fzf-lua').setup {
   winopts = {
     fullscreen = true
   },
@@ -13,7 +13,7 @@ require 'fzf-lua'.setup {
 
 local function list_sessions()
   local sessions_dir = vim.fn.stdpath('data') .. "/sessions/"
-  require 'fzf-lua'.files({
+  require('fzf-lua').files({
     prompt = "Restore Session> ",
     cmd = "ls",
     cwd = sessions_dir,
