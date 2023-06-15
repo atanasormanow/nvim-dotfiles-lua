@@ -1,9 +1,12 @@
-require 'treesitter-context'.setup {
+local ts_context = require('treesitter-context')
+
+ts_context.setup {
   enable = true,
   max_lines = 2,
   trim_scope = 'inner',
   min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
-  patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+  patterns = {
+    -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
     -- For all filetypes
     default = {
       'class',
@@ -75,7 +78,13 @@ require 'treesitter-context'.setup {
     -- rust = true,
   },
 
-  zindex = 20, -- The Z-index of the context window
+  zindex = 20,     -- The Z-index of the context window
   mode = 'cursor', -- Line used to calculate context. Choices: 'cursor', 'topline'
   separator = "‾",
 }
+
+vim.keymap.set(
+  "n", "gh",
+  function() ts_context.go_to_context() end,
+  { silent = true }
+)
