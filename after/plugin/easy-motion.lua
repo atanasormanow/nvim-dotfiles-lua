@@ -9,5 +9,5 @@ vim.keymap.set("", "<Leader>j", "<Plug>(easymotion-j)")
 vim.keymap.set("", "<Leader>k", "<Plug>(easymotion-k)")
 
 -- Gif config
-vim.keymap.set("", "/", "<Plug>(easymotion-sn)")
-vim.keymap.set("o", "/", "<Plug>(easymotion-tn)")
+-- vim.keymap.set("", "/", "<Plug>(easymotion-sn)")
+-- vim.keymap.set("o", "/", "<Plug>(easymotion-tn)")

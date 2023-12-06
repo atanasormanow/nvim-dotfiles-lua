@@ -27,8 +27,6 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
-  use('paretje/nvim-man')
-
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -65,8 +63,6 @@ return require('packer').startup(function(use)
     -- Fixed commit due to breaking changes
     commit = '1d3dd70a2d48e0f3441128eb4fb0b437a0bf2cc4',
   })
-
-  use('rcarriga/nvim-notify')
 
   use('windwp/nvim-autopairs')
 
