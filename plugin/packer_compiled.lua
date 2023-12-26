@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/nakk/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?.lua;/home/nakk/.cache/nvim/packer_hererocks/2.1.1700008891/share/lua/5.1/?/init.lua;/home/nakk/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?.lua;/home/nakk/.cache/nvim/packer_hererocks/2.1.1700008891/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/nakk/.cache/nvim/packer_hererocks/2.1.1700008891/lib/lua/5.1/?.so"
+local package_path_str = "/home/nakk/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/nakk/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/nakk/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/nakk/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/nakk/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -115,8 +115,12 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["ctrlsf.vim"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/ctrlsf.vim",
+    after_files = { "/home/nakk/.local/share/nvim/site/pack/packer/opt/ctrlsf.vim/after/plugin/ctrlsf.vim" },
+    cond = { "return not vim.g.vscode" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/opt/ctrlsf.vim",
     url = "https://github.com/dyng/ctrlsf.vim"
   },
   ["friendly-snippets"] = {
@@ -125,13 +129,19 @@ _G.packer_plugins = {
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["fzf-lua"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    cond = { "return not vim.g.vscode" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/opt/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    cond = { "return not vim.g.vscode" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/opt/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["lsp-zero.nvim"] = {
@@ -160,8 +170,11 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neoscroll.nvim"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    cond = { "return not vim.g.vscode" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/opt/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
   nerdcommenter = {
@@ -180,24 +193,17 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    cond = { "return not vim.g.vscode" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-man"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-man",
-    url = "https://github.com/paretje/nvim-man"
-  },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-surround"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
@@ -221,8 +227,11 @@ _G.packer_plugins = {
     url = "https://github.com/HiPhish/nvim-ts-rainbow2"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/nakk/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    cond = { "return not vim.g.vscode" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/nakk/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -262,6 +271,25 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
 time([[Config for nvim-surround]], false)
+-- Conditional loads
+time([[Conditional loading of nvim-web-devicons]], true)
+  require("packer.load")({"nvim-web-devicons"}, {}, _G.packer_plugins)
+time([[Conditional loading of nvim-web-devicons]], false)
+time([[Conditional loading of fzf-lua]], true)
+  require("packer.load")({"fzf-lua"}, {}, _G.packer_plugins)
+time([[Conditional loading of fzf-lua]], false)
+time([[Conditional loading of gruvbox.nvim]], true)
+  require("packer.load")({"gruvbox.nvim"}, {}, _G.packer_plugins)
+time([[Conditional loading of gruvbox.nvim]], false)
+time([[Conditional loading of neoscroll.nvim]], true)
+  require("packer.load")({"neoscroll.nvim"}, {}, _G.packer_plugins)
+time([[Conditional loading of neoscroll.nvim]], false)
+time([[Conditional loading of nvim-colorizer.lua]], true)
+  require("packer.load")({"nvim-colorizer.lua"}, {}, _G.packer_plugins)
+time([[Conditional loading of nvim-colorizer.lua]], false)
+time([[Conditional loading of ctrlsf.vim]], true)
+  require("packer.load")({"ctrlsf.vim"}, {}, _G.packer_plugins)
+time([[Conditional loading of ctrlsf.vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

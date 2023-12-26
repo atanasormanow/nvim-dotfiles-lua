@@ -1,0 +1,2 @@
+- add vscode specific settings/keymaps
+- load the code in after/plugins/X only if plugin X is loaded
