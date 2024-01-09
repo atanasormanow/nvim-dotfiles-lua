@@ -1,9 +1,12 @@
+local vscode = require("vscode-neovim")
+
 --> OPTIONS:
 ------------
 vim.g.mapleader = " "
 
 -- basic bg phonetic layout
-vim.opt.langmap = "чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\\|,"
+vim.opt.langmap =
+"чявертъуиопшщасдфгхйклзьцжбнмЧЯВЕРТЪУИОПШЩАСДФГХЙКЛЗѝЦЖБНМ;`qwertyuiop[]asdfghjklzxcvbnm~QWERTYUIOP{}ASDFGHJKLZXCVBNM,ю\\,Ю\\|,"
 
 -- using system clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -68,10 +71,6 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>t", "<cmd>tabnew<return>")
 
 -- TODO:
--- open last opened buffer
--- vim.keymap.set("n", "<leader><tab>", "<C-^>")
-
--- TODO:
 -- open terminal in smaller horizontal split
 -- vim.keymap.set("n", "<leader><return>",
 --   "<cmd>split | resize -5 | terminal<return>i"
@@ -89,9 +88,58 @@ vim.keymap.set("n", "q:", "<cmd>q<return>")
 -- Jump to last non-blank instead
 vim.keymap.set("n", "$", "g_")
 
--- TODO:
--- format file/selection
--- vim.keymap.set({ "n", "x" }, "<leader>=", "<cmd>LspZeroFormat<return>")
-
 -- prevent (*) from jumping to next match
 vim.keymap.set("n", "*", "*``", { silent = true })
+
+vim.keymap.set(
+  "n", "gr",
+  function()
+    vscode.call(
+      'references-view.findReferences',
+      { args = { vim.fn.expand('cword') } }
+    )
+  end)
+
+-- TODO: Why are these different?
+vim.keymap.set("n", "gk", "<cmd>call <SNR>8_switchEditor(v:count, 'next') <return>n ")
+vim.keymap.set("n", "gj", "<cmd>call <SNR>8_switchEditor(v:count, 'prev') <return>n ")
+
+
+vim.keymap.set(
+  "n", "gJ",
+  function()
+    vscode.call('workbench.action.moveEditorLeftInGroup')
+  end)
+
+vim.keymap.set(
+  "n", "gK",
+  function()
+    vscode.call('workbench.action.moveEditorRightInGroup')
+  end)
+
+
+-- open last opened buffer
+vim.keymap.set(
+  "n", "<leader><tab>",
+  function()
+    vscode.call('workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup')
+  end)
+
+vim.keymap.set(
+  "n", "gi",
+  function()
+    vscode.call('editor.action.goToImplementation')
+  end)
+
+vim.keymap.set(
+  "n", "gs",
+  function()
+    vscode.call('editor.action.goToTypeDefinition')
+  end)
+
+vim.keymap.set(
+  "n", "<C-a>",
+  function()
+    vscode.call('workbench.action.toggleSidebarVisibility')
+  end)
+
