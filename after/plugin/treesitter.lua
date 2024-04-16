@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require('nvim-treesitter.configs').setup {
     ensure_installed = {
       "vimdoc", "javascript", "typescript", "c", "cpp", "lua", "rust",
@@ -38,14 +38,12 @@ function setup()
     -- Additional modules ->
     rainbow = {
       enable = true,
+
       -- list of languages you want to disable the plugin for
-      disable = {},
-      -- Which query to use for finding delimiters
-      query = 'rainbow-parens',
-      -- Highlight the entire buffer all at once
-      strategy = require('ts-rainbow').strategy.global,
+      -- disable = {},
     }
   }
 end
 
-pcall(setup)
+setup()
+-- pcall(setup)

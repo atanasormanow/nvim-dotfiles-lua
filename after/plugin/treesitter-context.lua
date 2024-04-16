@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   local ts_context = require('treesitter-context')
 
   ts_context.setup {

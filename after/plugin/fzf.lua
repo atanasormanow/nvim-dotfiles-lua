@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require('fzf-lua').setup {
     winopts = {
       fullscreen = true

@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
 
   use({
     'HiPhish/nvim-ts-rainbow2',
-    cond = [[not vim.g.vscode]],
+    -- cond = [[not vim.g.vscode]],
   })
 
   use({
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
 
   use({
     'tpope/vim-fugitive',
-    cond = [[not vim.g.vscode]]
+    -- cond = [[not vim.g.vscode]]
   })
 
   use({
@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
         -- Configuration here, or leave empty to use defaults
       })
     end,
-    cond = [[not vim.g.vscode]]
+    -- cond = [[not vim.g.vscode]]
   })
 
   use({
@@ -92,7 +92,7 @@ return require('packer').startup(function(use)
 
   use({
     'preservim/nerdcommenter',
-    cond = [[not vim.g.vscode]]
+    -- cond = [[not vim.g.vscode]]
   })
 
   use({

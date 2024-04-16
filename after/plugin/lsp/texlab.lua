@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   local util = require('lspconfig.util')
 
   local texlab_build_status = vim.tbl_add_reverse_lookup {

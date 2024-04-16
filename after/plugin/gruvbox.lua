@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require("gruvbox").setup({
     undercurl = true,
     underline = true,

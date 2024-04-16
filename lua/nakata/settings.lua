@@ -59,7 +59,7 @@ vim.opt.smartcase = true
 -- make whitespace visable
 vim.opt.list = true
 -- set trailing spaces
-vim.opt.listchars = "trail:•"
+vim.opt.listchars = "trail:•,tab:▷-"
 
 -- open vertical splits on the right
 vim.opt.splitright = true

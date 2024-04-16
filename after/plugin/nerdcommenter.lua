@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   -- Create default mappings
   vim.g.NERDCreateDefaultMappings = 1
 

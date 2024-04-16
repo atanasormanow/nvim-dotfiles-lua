@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require('nvim-autopairs').setup({
     check_ts = true, -- use Treesitter
     disable_filetype = { "fzf" },

@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require('lualine').setup {
     options = {
       icons_enabled = true,

@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require("toggleterm").setup {
     size = function(term)
       if term.direction == "horizontal" then

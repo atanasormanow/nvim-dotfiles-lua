@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   -- move to {char}
   vim.keymap.set("", "<leader>F", "<Plug>(easymotion-bd-f)")
 

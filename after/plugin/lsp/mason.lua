@@ -1,4 +1,4 @@
-function setup()
+local function setup()
   require('mason').setup({
     ui = {
       icons = {
