@@ -1,3 +1,6 @@
 - add map <leader>= for format file in vscode
 - load the code in after/plugins/X only if plugin X is loaded,
   instead of using pcall (if such check is possible).
+
+SUGGESTIONS:
+- make pasting a line (after dd/yy) move the cursor to where it was on the deleted/yanked line

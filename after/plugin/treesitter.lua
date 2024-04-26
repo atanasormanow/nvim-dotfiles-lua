@@ -1,9 +1,9 @@
 local function setup()
-  require('nvim-treesitter.configs').setup {
+  require('nvim-treesitter.configs').setup({
     ensure_installed = {
-      "vimdoc", "javascript", "typescript", "c", "cpp", "lua", "rust",
-      "haskell", "scheme", "racket", "bash", "html", "css", "diff",
-      "markdown", "sql", "vim"
+      -- "vimdoc", "javascript", "typescript", "c", "cpp", "lua", "rust",
+      -- "haskell", "scheme", "racket", "bash", "html", "css", "diff",
+      -- "markdown", "sql", "vim"
     },
 
     sync_install = false,
@@ -37,13 +37,13 @@ local function setup()
 
     -- Additional modules ->
     rainbow = {
-      enable = true,
+      enable = not vim.g.vscode,
 
       -- list of languages you want to disable the plugin for
       -- disable = {},
     }
-  }
+  })
 end
 
-setup()
--- pcall(setup)
+-- setup()
+pcall(setup)
