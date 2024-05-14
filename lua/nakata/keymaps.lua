@@ -73,6 +73,9 @@ vim.keymap.set("n", "q:", "<cmd>q<return>")
 -- Jump to last non-blank instead
 vim.keymap.set("n", "$", "g_")
 
+-- Easier jump to the end of line
+vim.keymap.set("n", "+", "$", { silent = true })
+
 -- format file/selection
 vim.keymap.set({ "n", "x" }, "<leader>=", "<cmd>LspZeroFormat<return>")
 

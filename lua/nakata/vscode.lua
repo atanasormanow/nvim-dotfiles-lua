@@ -86,6 +86,9 @@ vim.keymap.set("n", "$", "g_")
 -- prevent (*) from jumping to next match
 vim.keymap.set("n", "*", "*``", { silent = true })
 
+-- Easier jump to the end of line
+vim.keymap.set("n", "+", "$", { silent = true })
+
 -- Find references
 vim.keymap.set(
   "n", "gr",
