@@ -10,7 +10,7 @@ local function setup()
     auto_install = true,
 
     highlight = {
-      enable = true,
+      enable = not vim.g.vscode,
       disable = { "latex" },
       -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
       -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).

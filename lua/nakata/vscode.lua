@@ -87,7 +87,7 @@ vim.keymap.set("n", "$", "g_")
 vim.keymap.set("n", "*", "*``", { silent = true })
 
 -- Easier jump to the end of line
-vim.keymap.set("n", "+", "$", { silent = true })
+vim.keymap.set({ "n", "x" }, "+", "$", { silent = true })
 
 -- Find references
 vim.keymap.set(
@@ -156,13 +156,14 @@ vim.keymap.set(
   end)
 
 -- Jump to lint marks
-vim.api.nvim_set_keymap(
+vim.keymap.set(
   'n', ']d',
-  '<cmd>lua vim.diagnostic.goto_next()<CR>',
-  { noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
+  function()
+    vscode.call("editor.action.marker.next")
+  end)
+
+vim.keymap.set(
   'n', '[d',
-  '<cmd>lua vim.diagnostic.goto_prev()<CR>',
-  { noremap = true, silent = true }
-)
+  function()
+    vscode.call("editor.action.marker.prev")
+  end)
