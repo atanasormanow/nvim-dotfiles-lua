@@ -99,10 +99,19 @@ vim.keymap.set(
     )
   end)
 
--- Move to next/previous tab
--- TODO: Why are the commands different?
-vim.keymap.set("n", "gk", "<cmd>call <SNR>8_switchEditor(v:count, 'next') <return>n ")
-vim.keymap.set("n", "gj", "<cmd>call <SNR>8_switchEditor(v:count, 'prev') <return>n ")
+-- Move to next tab
+vim.keymap.set(
+  "n", "gk",
+  function()
+    vscode.call('workbench.action.nextEditor')
+  end)
+
+-- Move to previous tab
+vim.keymap.set(
+  "n", "gj",
+  function()
+    vscode.call('workbench.action.previousEditor')
+  end)
 
 -- Move tab to the left
 vim.keymap.set(
