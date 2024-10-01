@@ -1,4 +1,5 @@
 local function setup()
+
   local post_hook = function(payload)
     local _, cursor_row = next(vim.api.nvim_win_get_cursor(0))
     local height = vim.api.nvim_win_get_height(0)
