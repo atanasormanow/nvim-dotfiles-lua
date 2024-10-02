@@ -25,8 +25,8 @@ local function setup()
   }
 
   -- Show fortunes/quotes on the bottom
-  -- local fortune = require("alpha.fortune")
-  -- dashboard.section.footer.val = fortune()
+  local fortune = require("alpha.fortune")
+  dashboard.section.footer.val = fortune()
 
   -- Send config to alpha
   alpha.setup(dashboard.opts)
