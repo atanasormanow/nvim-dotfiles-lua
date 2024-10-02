@@ -127,6 +127,7 @@ return require('packer').startup(function(use)
     'VonHeikemen/lsp-zero.nvim',
     branch = "v2.x",
     requires = {
+
       -- LSP Support
       { 'neovim/nvim-lspconfig' },
       { 'williamboman/mason.nvim' },
@@ -143,6 +144,7 @@ return require('packer').startup(function(use)
       -- Snippets
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
+
     },
     cond = [[not vim.g.vscode]]
   })

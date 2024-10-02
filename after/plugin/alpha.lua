@@ -24,6 +24,7 @@ local function setup()
     dashboard.button("q", "󰗼 : Quit NVIM", "<cmd>qa<return>"),
   }
 
+  -- TODO: add separation between the buttons and the footer
   -- Show fortunes/quotes on the bottom
   local fortune = require("alpha.fortune")
   dashboard.section.footer.val = fortune()
