@@ -20,6 +20,7 @@ local function setup()
 
   require('lspconfig').racket_langserver.setup {
     on_attach = on_attach,
+-- NOTE: if the langserver is missing, an arror will be thrown
     cmd = { "racket", "--lib", "racket-langserver" },
     filetypes = { "racket", "scheme" }
   }
