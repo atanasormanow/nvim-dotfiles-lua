@@ -85,8 +85,8 @@ return require('packer').startup(function(use)
 
   use({
     'goolord/alpha-nvim',
-    branch = 'feature/startify-fortune',
-    requires = { 'BlakeJC94/alpha-nvim-fortune' },
+    -- branch = 'feature/startify-fortune',
+    -- requires = { 'BlakeJC94/alpha-nvim-fortune' },
     cond = [[not vim.g.vscode]]
   })
 
