@@ -40,7 +40,7 @@ local function setup()
       enable = not vim.g.vscode,
 
       -- list of languages you want to disable the plugin for
-      -- disable = {},
+      disable = { "haskell" },
     }
   })
 end

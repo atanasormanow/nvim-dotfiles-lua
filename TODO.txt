@@ -1,5 +1,6 @@
 - load the code in after/plugins/X only if plugin X is loaded,
   instead of using pcall (if such check is possible).
+- Update lsp-zero from v2.x to v4.x
 
 SUGGESTIONS:
 - make pasting a line (after dd/yy) move the cursor to where it was on the deleted/yanked line
