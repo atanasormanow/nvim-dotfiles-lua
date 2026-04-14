@@ -1,6 +1,5 @@
 local vscode = require("vscode-neovim")
 
-
 --> OPTIONS:
 ------------
 vim.g.mapleader = " "
@@ -176,3 +175,4 @@ vim.keymap.set(
   function()
     vscode.call("editor.action.marker.prev")
   end)
+
